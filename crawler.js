@@ -145,15 +145,15 @@ async function crawler(url) {
 const urlsVisitados = new Set();
 
 
-
+let url = "exemplo.com.br";
 async function init() {
 
   	try{
-      if(new URL(url)){
-    		const parser = new URL(url)
-    		const hostname = parser.origin;
-  		  crawler(hostname);
-      }	
+	      if(new URL(url)){
+	    		const parser = new URL(url)
+	    		const hostname = parser.origin;
+	  		  crawler(hostname);
+	      }	
   	}catch(e){
   		console.log(e.message)
   	}
